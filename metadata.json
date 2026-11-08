@@ -1,0 +1,6 @@
+{
+  "name": "Ticketmaster Coupon",
+  "description": "An interactive, beautiful landing page and reward claim flow to earn high-value ticket coupons through engaging trivia and confirmation steps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
