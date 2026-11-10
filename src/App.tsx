@@ -963,10 +963,7 @@ export default function App() {
 
       </main>
 
-      {/* Styled Footer */}
-      <footer className="mt-8 text-center text-[11px] font-extrabold text-slate-400 select-none z-10 py-2 border-t border-slate-200/50">
-        &copy; 2026 Ticketmaster Promo Claim Portal. Created with AI-supported high integrity sandbox logic.
-      </footer>
+
     </div>
   );
 }
