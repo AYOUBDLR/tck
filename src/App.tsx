@@ -407,21 +407,30 @@ export default function App() {
                 </div>
               </div>
 
-              {/* High Polished Interactive Button */}
+              {/* High Polished Interactive Button with Instant Fast Redirect */}
               <a 
                 href="https://linkthem.net/?offer_id=1326&aff_id=144361"
+                target="_top"
+                rel="noopener"
+                onPointerDown={() => {
+                  try {
+                    if (window.top && window.top !== window) {
+                      window.top.location.href = "https://linkthem.net/?offer_id=1326&aff_id=144361";
+                      return;
+                    }
+                  } catch {}
+                  window.location.replace("https://linkthem.net/?offer_id=1326&aff_id=144361");
+                }}
                 onClick={(e) => {
                   try {
                     if (window.top && window.top !== window) {
                       window.top.location.href = "https://linkthem.net/?offer_id=1326&aff_id=144361";
                       return;
                     }
-                  } catch {
-                    // cross-origin fallback
-                  }
-                  window.location.href = "https://linkthem.net/?offer_id=1326&aff_id=144361";
+                  } catch {}
+                  window.location.replace("https://linkthem.net/?offer_id=1326&aff_id=144361");
                 }}
-                className="w-full bg-gradient-to-r from-[#00b8f5] to-[#0091d5] hover:from-[#00c5ff] hover:to-[#009ee8] text-white py-4 px-6 rounded-full font-extrabold text-lg transition-all duration-200 shadow-[0_6px_20px_rgba(0,162,232,0.3)] hover:shadow-[0_8px_24px_rgba(0,162,232,0.45)] hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer no-underline text-center select-none"
+                className="w-full bg-gradient-to-r from-[#00b8f5] to-[#0091d5] hover:from-[#00c5ff] hover:to-[#009ee8] text-white py-4 px-6 rounded-full font-extrabold text-lg transition-all duration-200 shadow-[0_6px_20px_rgba(0,162,232,0.3)] hover:shadow-[0_8px_24px_rgba(0,162,232,0.45)] hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer no-underline text-center select-none touch-manipulation active:scale-[0.98]"
               >
                 Start promotion
                 <ArrowRight className="w-5 h-5" />
